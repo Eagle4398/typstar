@@ -42,11 +42,12 @@ for _, val in pairs(wrappings) do
 end
 
 return {
-    start('dm', '$\n<>\t<>\n<>$', { cap(1), visual(1), cap(1) }, markup),
+    start('dm', '$\n<>\t<>\n<>$\n<><>', { cap(1), visual(1), cap(1), cap(1), visual(2)}, markup),
     helper.start_snip_in_newl(
         'dm',
-        '$\n<>\t<>\n<>$',
-        { helper.leading_white_spaces(1), visual(1), helper.leading_white_spaces(1) },
+        '$\n<>\t<>\n<>$\n<><>',
+        { helper.leading_white_spaces(1), visual(1), helper.leading_white_spaces(1),
+    helper.leading_white_spaces(1), visual(2)},
         markup
     ),
     start('fla', '#flashcard(0)[<>][\n<>\t<>\n<>]', { i(1, 'flashcard'), cap(1), visual(2), cap(1) }, markup),
